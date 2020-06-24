@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+:root {
+	--Red: hsl(0, 78%, 62%);
+	--Cyan: hsl(180, 62%, 55%);
+	--Orange: hsl(34, 97%, 64%);
+	--Blue: hsl(212, 86%, 64%);
+	--VeryDarkBlue: hsl(234, 12%, 34%);
+	--GrayishBlue: hsl(229, 6%, 66%);
+	--VeryLightGray: hsl(0, 0%, 98%);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin: 0 auto;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	background-color: var(--VeryLightGray);
+}
+
+.container {
+	margin-top: 40px;
+	margin-bottom: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	display: grid;
+	grid-template-areas: "head""cards";
+	grid-gap: 25px;
+}
+
+.head {
+	grid-area: head;
+	justify-self: center;
+	width: 450px;
+	text-align: center;
+}
+
+.head h1 {
+	color: var(--VeryDarkBlue);
+}
+
+.head h2 {
+	color: var(--VeryDarkBlue);
+	font-weight: 200;
+}
+
+.head p {
+	color: var(--GrayishBlue);
+	font-size: 13px;
+}
+
+.cards {
+	grid-area: cards;
+	display: grid;
+	grid-gap: 30px;
+	grid-template-areas: "col-1 col-2 col-3";
+}
+
+.card {
+	background-color: var(--VeryLightGray);
+	box-shadow: 0 0 10px 0 var(--VeryDarkBlue);
+	border-radius: 5px;
+	padding: 20px;
+	border-top: 3px solid;
+}
+
+.card-light-blue {
+	grid-area: col-1;
+	align-self: center;
+	border-top-color: var(--Cyan);
+}
+
+.cards-center {
+	grid-area: col-2;
+	display: grid;
+	grid-template-areas: "col-1""col-2";
+	grid-gap: 20px;
+}
+
+.card-red {
+	grid-area: col-1;
+	border-top-color: var(--Red);
+}
+
+.card-orange {
+	grid-area: col-2;
+	border-top-color: var(--Orange);
+}
+
+.card-blue {
+	grid-area: col-3;
+	align-self: center;
+	border-top-color: var(--Blue);
+}
+
+.cards .title {
+	color: var(--VeryDarkBlue);
+	font-weight: 700;
+}
+
+.cards .text {
+	color: var(--GrayishBlue);
+	font-weight: 200;
+	font-size: .8em;
+	padding-right: 4px;
+	margin-bottom: 25px;
+}
+
+.cards .icon {
+	width: 35px;
+	float: right;
+}
+
+@media (max-width: 790px) {
+	.cards {
+		grid-template-areas: "col-1" "col-2" "col-3";
+	}
+
+	.head {
+		width: auto;
+	}
+
+	.head h2,
+	.head h1 {
+		font-size: 1.3em;
+	}
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
